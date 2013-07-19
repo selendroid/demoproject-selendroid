@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>io.selendroid</groupId>
+	<artifactId>demoproject-selendroid</artifactId>
+	<version>0.4.2-SNAPSHOT</version>
+	<name>demoproject-selendroid</name>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<selendroid.version>0.4.2</selendroid.version>
+	</properties>
+
+	<developers>
+		<developer>
+			<id>ddary</id>
+			<name>Dominik Dary</name>
+			<url>https://www.github.com/dominikdary</url>
+		</developer>
+	</developers>
+	<dependencies>
+		<dependency>
+			<groupId>io.selendroid</groupId>
+			<version>${selendroid.version}</version>
+			<artifactId>selendroid-standalone</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.selendroid</groupId>
+			<version>${selendroid.version}</version>
+			<artifactId>selendroid-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.8</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>2.3.2</version>
+					<configuration>
+						<source>1.6</source>
+						<target>1.6</target>
+					</configuration>
+				</plugin>
+				<!-- just to be on the safe side that the build jar is taken -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-eclipse-plugin</artifactId>
+					<version>2.9</version>
+					<configuration>
+						<useProjectReferences>false</useProjectReferences>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
