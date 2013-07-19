@@ -20,7 +20,6 @@ public class SelendroidIntegrationTest {
 	@Test
 	public void testShouldBeAbleToEnterText() {
 		WebElement inputField = driver.findElement(By.id("my_text_field"));
-		Assert.assertEquals("true", inputField.getAttribute("enabled"));
 		inputField.sendKeys("Selendroid");
 		Assert.assertEquals("Selendroid", inputField.getText());
 	}
