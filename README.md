@@ -1,7 +1,7 @@
 Demo about how to use selendroid
 =====
 
-This project demonstrated about how the test automation tool [selendroid](http://selendroid.io) can be used to test native and hybrid Android apps.
+This project demonstrats about how to use the test automation tool [selendroid](http://selendroid.io) that can be used to test native and hybrid Android apps.
 
 Before you start
 ------
@@ -33,6 +33,7 @@ Before the test is executed the selendroid-standalone server will be started:
 
 ```java
 SelendroidConfiguration config = new SelendroidConfiguration();
+// Add the selendroid-test-app to the standalone server
 config.addSupportedApp("src/main/resources/selendroid-test-app-0.4.2.apk");
 selendroidServer = new SelendroidLauncher(config);
 selendroidServer.lauchSelendroid();
@@ -41,8 +42,8 @@ selendroidServer.lauchSelendroid();
 If the server is started the ```SelendroidDriver```is initialized:
 
 ```java
-SelendroidCapabilities caps = SelendroidCapabilities
-.emulator("io.selendroid.testapp:0.4.2");
+// Create the selendroid capabilities and specify to use an emulator and selendroid's test app
+SelendroidCapabilities caps = SelendroidCapabilities.emulator("io.selendroid.testapp:0.4.2");
 driver = new SelendroidDriver("http://localhost:5555/wd/hub", caps);
 ```
 
@@ -52,15 +53,12 @@ The Test
 For testing the Android app the [webdriver API](http://docs.seleniumhq.org/docs/03_webdriver.jsp) is used:
 
 ```java
+// Find an element by id
 WebElement inputField = driver.findElement(By.id("my_text_field"));
+//enter a text into the text field
 inputField.sendKeys("Selendroid");
+//check if the text has been entered into the text field
 Assert.assertEquals("Selendroid", inputField.getText());
 ```
-
-The test is about 
-
-* finding the text field, 
-* entering a text and 
-* checking that the text was entered successfully.
 
 For more details about selendroid please read the documentation [http://selendroid.io](http://selendroid.io).
