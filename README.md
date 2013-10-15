@@ -17,24 +17,24 @@ Selendroid is now available in Maven central can be added in the dependency sect
 ```xml
 <dependency>
 	<groupId>io.selendroid</groupId>
-	<version>0.4.2</version>
+	<version>0.5.1</version>
 	<artifactId>selendroid-standalone</artifactId>
 </dependency>
 <dependency>
 	<groupId>io.selendroid</groupId>
-	<version>0.4.2</version>
+	<version>0.5.1</version>
 	<artifactId>selendroid-client</artifactId>
 </dependency>
 ```
 
-The test itself you find find [here](https://github.com/DominikDary/demoproject-selendroid/blob/master/src/main/java/io/selendroid/demo/SelendroidIntegrationTest.java).
+The test itself you find find [here](https://github.com/selendroid/demoproject-selendroid/blob/master/src/main/java/io/selendroid/demo/SelendroidIntegrationTest.java).
 
 Before the test is executed the selendroid-standalone server will be started:
 
 ```java
 SelendroidConfiguration config = new SelendroidConfiguration();
 // Add the selendroid-test-app to the standalone server
-config.addSupportedApp("src/main/resources/selendroid-test-app-0.4.2.apk");
+config.addSupportedApp("src/main/resources/selendroid-test-app-0.5.1.apk");
 selendroidServer = new SelendroidLauncher(config);
 selendroidServer.lauchSelendroid();
 ```
@@ -43,7 +43,7 @@ If the server is started the ```SelendroidDriver```is initialized:
 
 ```java
 // Create the selendroid capabilities and specify to use an emulator and selendroid's test app
-SelendroidCapabilities caps = SelendroidCapabilities.emulator("io.selendroid.testapp:0.4.2");
+SelendroidCapabilities caps = SelendroidCapabilities.emulator("io.selendroid.testapp:0.5.1");
 driver = new SelendroidDriver("http://localhost:5555/wd/hub", caps);
 ```
 
@@ -61,4 +61,4 @@ inputField.sendKeys("Selendroid");
 Assert.assertEquals("Selendroid", inputField.getText());
 ```
 
-For more details about selendroid please read the documentation [http://selendroid.io](http://selendroid.io).
+For more details about selendroid, please read the documentation [http://selendroid.io](http://selendroid.io).

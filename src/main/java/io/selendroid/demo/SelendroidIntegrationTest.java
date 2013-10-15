@@ -1,3 +1,16 @@
+/*
+ * Copyright 2012-2013 eBay Software Foundation and selendroid committers.
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License. You may obtain a copy of the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software distributed under the License
+ * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+ * or implied. See the License for the specific language governing permissions and limitations under
+ * the License.
+ */
 package io.selendroid.demo;
 
 import io.selendroid.SelendroidCapabilities;
@@ -5,49 +18,48 @@ import io.selendroid.SelendroidConfiguration;
 import io.selendroid.SelendroidDriver;
 import io.selendroid.SelendroidLauncher;
 
+import org.junit.AfterClass;
+import org.junit.Assert;
+import org.junit.BeforeClass;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 
 public class SelendroidIntegrationTest {
-	private SelendroidLauncher selendroidServer = null;
-	private WebDriver driver = null;
+  private SelendroidLauncher selendroidServer = null;
+  private WebDriver driver = null;
 
-	@Test
-	public void testShouldBeAbleToEnterText() {
-		WebElement inputField = driver.findElement(By.id("my_text_field"));
-		inputField.sendKeys("Selendroid");
-		Assert.assertEquals("Selendroid", inputField.getText());
-	}
+  @Test
+  public void testShouldBeAbleToEnterText() {
+    WebElement inputField = driver.findElement(By.id("my_text_field"));
+    inputField.sendKeys("Selendroid");
+    Assert.assertEquals("Selendroid", inputField.getText());
+  }
 
-	@BeforeClass
-	protected void startSelendroidServer() throws Exception {
-		if (selendroidServer != null) {
-			selendroidServer.stopSelendroid();
-		}
-		SelendroidConfiguration config = new SelendroidConfiguration();
-		config.addSupportedApp("src/main/resources/selendroid-test-app-0.4.2.apk");
-		selendroidServer = new SelendroidLauncher(config);
-		selendroidServer.lauchSelendroid();
+  @BeforeClass
+  protected void startSelendroidServer() throws Exception {
+    if (selendroidServer != null) {
+      selendroidServer.stopSelendroid();
+    }
+    SelendroidConfiguration config = new SelendroidConfiguration();
+    config.addSupportedApp("src/main/resources/selendroid-test-app-0.5.1.apk");
+    selendroidServer = new SelendroidLauncher(config);
+    selendroidServer.lauchSelendroid();
 
-		SelendroidCapabilities caps = SelendroidCapabilities
-				.emulator("io.selendroid.testapp:0.4.2");
+    SelendroidCapabilities caps = SelendroidCapabilities.emulator("io.selendroid.testapp:0.5.1");
 
-		driver = new SelendroidDriver("http://localhost:5555/wd/hub", caps);
-	}
+    driver = new SelendroidDriver("http://localhost:5555/wd/hub", caps);
+  }
 
-	@AfterClass
-	protected void stopSelendroidServer() {
-		if (driver != null) {
-			driver.quit();
-		}
-		if (selendroidServer != null) {
-			selendroidServer.stopSelendroid();
-		}
-	}
+  @AfterClass
+  protected void stopSelendroidServer() {
+    if (driver != null) {
+      driver.quit();
+    }
+    if (selendroidServer != null) {
+      selendroidServer.stopSelendroid();
+    }
+  }
 
 }
