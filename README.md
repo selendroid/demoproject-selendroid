@@ -69,7 +69,7 @@ config.addSupportedApp("src/main/resources/selendroid-test-app-0.5.1.apk");
 selendroidServer = new SelendroidLauncher(config);
 selendroidServer.lauchSelendroid();
 ```
-The test itself you find find [here](https://github.com/selendroid/demoproject-selendroid/blob/master/src/main/java/io/selendroid/demo/SelendroidIntegrationTest.java).
+The test itself you find find [here](https://github.com/selendroid/demoproject-selendroid/blob/master/src/main/java/io/selendroid/demo/SelendroidIntegrationTest.java#L45).
 
 
 
@@ -100,13 +100,13 @@ Assert.assertEquals("Selendroid", inputField.getText());
 
 ## Native App Test
 
-Selendroid's [test app]() contains an user registration flow that will be tested in [this test class](blabla).
+Selendroid's [test app](https://github.com/selendroid/demoproject-selendroid/blob/master/src/main/resources/selendroid-test-app-0.5.1.apk) contains an user registration flow that will be tested in the [UserRegistrationTest](https://github.com/selendroid/demoproject-selendroid/blob/master/src/main/java/io/selendroid/demo/nativeui/UserRegistrationTest.java).
 
 The test demonstrates how activities can be started and how the interaction with different elements can be done.
 
 ## Hybrid App Test
 
-Selendroid can be used to test hybrid applications. The project contains a cordova sample app and the [EmployeeDirectoryTest](blabla) demonstrates about how web views can be tested.
+Selendroid can be used to test hybrid applications. The project contains a [cordova sample app](https://github.com/selendroid/demoproject-selendroid/blob/master/src/main/resources/employee-directory.apk) and the [EmployeeDirectoryTest](https://github.com/selendroid/demoproject-selendroid/blob/master/src/main/java/io/selendroid/demo/webui/EmployeeDirectoryTest.java) demonstrates about how web views can be tested.
 
 # More Details?
 More details about selendroid can be found in the  [documentation](http://selendroid.io).
