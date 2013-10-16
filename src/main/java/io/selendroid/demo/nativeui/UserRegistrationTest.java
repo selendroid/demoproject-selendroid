@@ -37,7 +37,7 @@ public class UserRegistrationTest {
   public void setup() throws Exception {
     driver =
         new SelendroidDriver("http://localhost:5555/wd/hub",
-            SelendroidCapabilities.device("io.selendroid.testapp:0.5.1"));
+            SelendroidCapabilities.device("io.selendroid.testapp:0.6.0-SNAPSHOT"));
   }
 
   @Test
@@ -55,20 +55,20 @@ public class UserRegistrationTest {
     WebElement username = driver.findElement(By.id("inputUsername"));
     username.sendKeys(user.username);
 
-    driver.findElement(By.id("inputEmail")).sendKeys(user.email);
+    driver.findElement(By.name("email of the customer")).sendKeys(user.email);
     driver.findElement(By.id("inputPassword")).sendKeys(user.password);
 
-    WebElement nameInput = driver.findElement(By.id("inputName"));
+    WebElement nameInput = driver.findElement(By.xpath("//EditText[@id='inputName']"));
     Assert.assertEquals(nameInput.getText(), "Mr. Burns");
     nameInput.clear();
     nameInput.sendKeys(user.name);
 
-    driver.findElement(By.id("input_preferedProgrammingLanguage")).click();
+    driver.findElement(By.tagName("Spinner")).click();
     driver.findElement(By.linkText(user.programmingLanguage)).click();
 
-    driver.findElement(By.id("input_adds")).click();
+    driver.findElement(By.className("android.widget.CheckBox")).click();
 
-    driver.findElement(By.id("btnRegisterUser")).click();
+    driver.findElement(By.linkText("Register User (verify)")).click();
     Assert.assertEquals(driver.getCurrentUrl(), "and-activity://VerifyUserActivity");
   }
 

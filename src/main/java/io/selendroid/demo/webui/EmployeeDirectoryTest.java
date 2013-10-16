@@ -55,23 +55,18 @@ public class EmployeeDirectoryTest {
     Assert.assertEquals(driver.getCurrentUrl(), "file:///android_asset/www/index.html#employees/4");
 
     // Verify Manager
-    Assert.assertThat(driver.findElements(By.tagName("li")).get(0).getText(),
-        endsWith("James King"));
+    Assert.assertThat(driver.findElements(By.tagName("li")).get(0).getText(),endsWith("James King"));
 
     // Verify number of direct reports
     WebElement directs = driver.findElements(By.tagName("li")).get(1);
     Assert.assertThat(directs.getText(), endsWith("3"));
     directs.click();
-    Assert.assertEquals(driver.getCurrentUrl(),
-        "file:///android_asset/www/index.html#employees/4/reports");
+    Assert.assertEquals(driver.getCurrentUrl(),"file:///android_asset/www/index.html#employees/4/reports");
 
     // Verify directs by name
-    Assert.assertThat(driver.findElements(By.tagName("li")).get(0).getText(),
-        startsWith("Paul Jones"));
-    Assert.assertThat(driver.findElements(By.tagName("li")).get(1).getText(),
-        startsWith("Paula Gates"));
-    Assert.assertThat(driver.findElements(By.tagName("li")).get(2).getText(),
-        startsWith("Steven Wells"));
+    Assert.assertThat(driver.findElements(By.tagName("li")).get(0).getText(),startsWith("Paul Jones"));
+    Assert.assertThat(driver.findElements(By.tagName("li")).get(1).getText(),startsWith("Paula Gates"));
+    Assert.assertThat(driver.findElements(By.tagName("li")).get(2).getText(),startsWith("Steven Wells"));
 
     driver.navigate().back();
 
