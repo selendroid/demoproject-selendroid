@@ -108,5 +108,10 @@ The test demonstrates how activities can be started and how the interaction with
 
 Selendroid can be used to test hybrid applications. The project contains a [cordova sample app](https://github.com/selendroid/demoproject-selendroid/blob/master/src/main/resources/employee-directory.apk) and the [EmployeeDirectoryTest](https://github.com/selendroid/demoproject-selendroid/blob/master/src/main/java/io/selendroid/demo/webui/EmployeeDirectoryTest.java) demonstrates about how web views can be tested.
 
+## Writing Tests in other languages
+
+Selendroid tests can be written in every programming language a selenium client binding is available.
+A simple JUnit based python tests you can find [here](https://github.com/selendroid/demoproject-selendroid/blob/master/src/main/python/FindElementTest.py).
+
 # More Details?
 More details about selendroid can be found in the  [documentation](http://selendroid.io).
