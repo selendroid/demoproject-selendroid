@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.selendroid</groupId>
 	<artifactId>demoproject-selendroid</artifactId>
-	<version>0.5.1</version>
+	<version>0.7.0</version>
 	<name>demoproject-selendroid</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<selendroid.version>0.5.1</selendroid.version>
+		<selendroid.version>0.7.0</selendroid.version>
 	</properties>
 
 	<developers>
