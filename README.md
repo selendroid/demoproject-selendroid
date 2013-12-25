@@ -106,7 +106,11 @@ The test demonstrates how activities can be started and how the interaction with
 
 ## Hybrid App Test
 
-Selendroid can be used to test hybrid applications. The project contains a [cordova sample app](https://github.com/selendroid/demoproject-selendroid/blob/master/src/main/resources/employee-directory.apk) and the [EmployeeDirectoryTest](https://github.com/selendroid/demoproject-selendroid/blob/master/src/main/java/io/selendroid/demo/webui/EmployeeDirectoryTest.java) demonstrates about how web views can be tested.
+Selendroid can be used to test hybrid applications. The project contains a [cordova sample app](https://github.com/selendroid/demoproject-selendroid/blob/master/src/main/resources/employee-directory.apk) and the [EmployeeDirectoryTest](https:/
+
+## Testing the mobile web
+
+Selendroid supports with version 0.7.0 testing the mobile web. The project contains [sample](http://goo.gl/2iLiKj).
 
 ## Writing Tests in other languages
 
