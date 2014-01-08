@@ -17,12 +17,12 @@ Selendroid is now available in Maven central can be added in the dependency sect
 ```xml
 <dependency>
 	<groupId>io.selendroid</groupId>
-	<version>0.5.1</version>
+	<version>0.7.0</version>
 	<artifactId>selendroid-standalone</artifactId>
 </dependency>
 <dependency>
 	<groupId>io.selendroid</groupId>
-	<version>0.5.1</version>
+	<version>0.7.0</version>
 	<artifactId>selendroid-client</artifactId>
 </dependency>
 ```
@@ -37,7 +37,7 @@ Before starting ```SelendroidDriver``` it is mandatory to start the ```Selendroi
 Go through Selendroid's [setup instructions](http://selendroid.io/setup.html) and download the current version. The applications that are we are using in this project are located in [this folder](https://github.com/selendroid/demoproject-selendroid/tree/master/src/main/resources).
 
 ```
-java -jar selendroid-standalone-0.5.1-with-dependencies.jar -aut EmloyeeDirectory.apk -aut selendroid-test-app-0.5.1.apk
+java -jar selendroid-standalone-0.7.0-with-dependencies.jar -aut EmployeeDirectory.apk -aut selendroid-test-app-0.7.0.apk
 ```
 
 When the server is started you can verify the current configuration [http://localhost:5555/wd/hub/status](http://localhost:5555/wd/hub/status):
