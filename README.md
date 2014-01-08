@@ -1,4 +1,4 @@
-# Repository for a quick start with [selendroid](http://selendroid.io)
+## Repository for a quick start with selendroid
 
 The documentation is available at: 
 
