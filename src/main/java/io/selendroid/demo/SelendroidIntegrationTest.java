@@ -27,8 +27,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class SelendroidIntegrationTest {
-  private SelendroidLauncher selendroidServer = null;
-  private WebDriver driver = null;
+  private static SelendroidLauncher selendroidServer = null;
+  private static WebDriver driver = null;
 
   @Test
   public void testShouldBeAbleToEnterText() {
@@ -38,7 +38,7 @@ public class SelendroidIntegrationTest {
   }
 
   @BeforeClass
-  protected void startSelendroidServer() throws Exception {
+  public static void startSelendroidServer() throws Exception {
     if (selendroidServer != null) {
       selendroidServer.stopSelendroid();
     }
@@ -53,7 +53,7 @@ public class SelendroidIntegrationTest {
   }
 
   @AfterClass
-  protected void stopSelendroidServer() {
+  public static void stopSelendroidServer() {
     if (driver != null) {
       driver.quit();
     }
