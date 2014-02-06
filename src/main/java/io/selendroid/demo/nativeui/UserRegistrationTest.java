@@ -26,7 +26,7 @@ import org.openqa.selenium.WebElement;
 
 /**
  * Base Test to demonstrate how to test native android apps with Selendroid. App under test is:
- * src/main/resources/selendroid-test-app-0.5.1.apk
+ * src/main/resources/selendroid-test-app-0.8.0.apk
  * 
  * @author ddary
  */
