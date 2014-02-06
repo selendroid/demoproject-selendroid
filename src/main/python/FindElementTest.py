@@ -8,11 +8,10 @@ from selenium import webdriver
 class FindElementTest(unittest.TestCase):
 
     def setUp(self):
-        desired_capabilities = {'aut': 'io.selendroid.testapp:0.7.0'}
+        desired_capabilities = {'aut': 'io.selendroid.testapp:0.8.0'}
 
         self.driver = webdriver.Remote(
-            desired_capabilities=desired_capabilities,
-            command_executor="http://127.0.0.1:5555/wd/hub"
+            desired_capabilities=desired_capabilities
         )
         self.driver.implicitly_wait(30)
 

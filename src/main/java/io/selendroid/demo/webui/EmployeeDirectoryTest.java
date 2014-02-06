@@ -27,8 +27,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 /**
- * Base Test to demonstrate how to test hybrid android apps with Selendroid.
- * App under test is: src/main/resources/employee-directory.apk
+ * Base Test to demonstrate how to test hybrid android apps with Selendroid. App under test is:
+ * src/main/resources/employee-directory.apk
  * 
  * @author ddary
  */
@@ -37,9 +37,7 @@ public class EmployeeDirectoryTest {
 
   @Before
   public void setup() throws Exception {
-    driver =
-        new SelendroidDriver("http://localhost:5555/wd/hub",
-            SelendroidCapabilities.device("io.selendroid.directory:0.0.1"));
+    driver = new SelendroidDriver(new SelendroidCapabilities("io.selendroid.directory:0.0.1"));
   }
 
   @Test
@@ -55,18 +53,23 @@ public class EmployeeDirectoryTest {
     Assert.assertEquals(driver.getCurrentUrl(), "file:///android_asset/www/index.html#employees/4");
 
     // Verify Manager
-    Assert.assertThat(driver.findElements(By.tagName("li")).get(0).getText(),endsWith("James King"));
+    Assert.assertThat(driver.findElements(By.tagName("li")).get(0).getText(),
+        endsWith("James King"));
 
     // Verify number of direct reports
     WebElement directs = driver.findElements(By.tagName("li")).get(1);
     Assert.assertThat(directs.getText(), endsWith("3"));
     directs.click();
-    Assert.assertEquals(driver.getCurrentUrl(),"file:///android_asset/www/index.html#employees/4/reports");
+    Assert.assertEquals(driver.getCurrentUrl(),
+        "file:///android_asset/www/index.html#employees/4/reports");
 
     // Verify directs by name
-    Assert.assertThat(driver.findElements(By.tagName("li")).get(0).getText(),startsWith("Paul Jones"));
-    Assert.assertThat(driver.findElements(By.tagName("li")).get(1).getText(),startsWith("Paula Gates"));
-    Assert.assertThat(driver.findElements(By.tagName("li")).get(2).getText(),startsWith("Steven Wells"));
+    Assert.assertThat(driver.findElements(By.tagName("li")).get(0).getText(),
+        startsWith("Paul Jones"));
+    Assert.assertThat(driver.findElements(By.tagName("li")).get(1).getText(),
+        startsWith("Paula Gates"));
+    Assert.assertThat(driver.findElements(By.tagName("li")).get(2).getText(),
+        startsWith("Steven Wells"));
 
     driver.navigate().back();
 

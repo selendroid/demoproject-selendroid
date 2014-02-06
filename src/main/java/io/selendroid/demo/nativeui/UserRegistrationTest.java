@@ -25,8 +25,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 /**
- * Base Test to demonstrate how to test native android apps with Selendroid.
- * App under test is: src/main/resources/selendroid-test-app-0.5.1.apk
+ * Base Test to demonstrate how to test native android apps with Selendroid. App under test is:
+ * src/main/resources/selendroid-test-app-0.5.1.apk
  * 
  * @author ddary
  */
@@ -35,9 +35,7 @@ public class UserRegistrationTest {
 
   @Before
   public void setup() throws Exception {
-    driver =
-        new SelendroidDriver("http://localhost:5555/wd/hub",
-            SelendroidCapabilities.device("io.selendroid.testapp:0.6.0-SNAPSHOT"));
+    driver = new SelendroidDriver(new SelendroidCapabilities("io.selendroid.testapp:0.8.0"));
   }
 
   @Test

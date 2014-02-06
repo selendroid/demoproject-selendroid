@@ -55,13 +55,13 @@ public class MobileWebTest {
       selendroidServer.stopSelendroid();
     }
     SelendroidConfiguration config = new SelendroidConfiguration();
-    
+
     selendroidServer = new SelendroidLauncher(config);
     selendroidServer.lauchSelendroid();
 
     DesiredCapabilities caps = SelendroidCapabilities.android();
 
-    driver = new SelendroidDriver("http://localhost:5555/wd/hub", caps);
+    driver = new SelendroidDriver(caps);
   }
 
   @After

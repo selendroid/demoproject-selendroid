@@ -43,13 +43,14 @@ public class SelendroidIntegrationTest {
       selendroidServer.stopSelendroid();
     }
     SelendroidConfiguration config = new SelendroidConfiguration();
-    config.addSupportedApp("src/main/resources/selendroid-test-app-0.6.0-SNAPSHOT.apk");
+    config.addSupportedApp("src/main/resources/selendroid-test-app-0.8.0.apk");
     selendroidServer = new SelendroidLauncher(config);
     selendroidServer.lauchSelendroid();
 
-    SelendroidCapabilities caps = SelendroidCapabilities.emulator("io.selendroid.testapp:0.6.0-SNAPSHOT");
+    SelendroidCapabilities caps =
+        new SelendroidCapabilities("io.selendroid.testapp:0.6.0-SNAPSHOT");
 
-    driver = new SelendroidDriver("http://localhost:5555/wd/hub", caps);
+    driver = new SelendroidDriver(caps);
   }
 
   @AfterClass
