@@ -48,7 +48,7 @@ public class SelendroidIntegrationTest {
     selendroidServer.lauchSelendroid();
 
     SelendroidCapabilities caps =
-        new SelendroidCapabilities("io.selendroid.testapp:0.6.0-SNAPSHOT");
+        new SelendroidCapabilities("io.selendroid.testapp:0.8.0-SNAPSHOT");
 
     driver = new SelendroidDriver(caps);
   }
