@@ -18,6 +18,8 @@ import static org.hamcrest.Matchers.startsWith;
 import io.selendroid.SelendroidCapabilities;
 import io.selendroid.SelendroidDriver;
 
+import java.util.concurrent.TimeUnit;
+
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -28,7 +30,8 @@ import org.openqa.selenium.WebElement;
 
 /**
  * Base Test to demonstrate how to test hybrid android apps with Selendroid. App under test is:
- * src/main/resources/employee-directory.apk
+ * <code>src/main/resources/employee-directory.apk</code> Please make sure that you start a
+ * selendroid-standalone with above mentioned apk.
  * 
  * @author ddary
  */
@@ -38,6 +41,7 @@ public class EmployeeDirectoryTest {
   @Before
   public void setup() throws Exception {
     driver = new SelendroidDriver(new SelendroidCapabilities("io.selendroid.directory:0.0.1"));
+    driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
   }
 
   @Test
