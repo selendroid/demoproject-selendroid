@@ -8,7 +8,7 @@ from selenium import webdriver
 class FindElementTest(unittest.TestCase):
 
     def setUp(self):
-        desired_capabilities = {'aut': 'io.selendroid.testapp:0.8.0'}
+        desired_capabilities = {'aut': 'io.selendroid.testapp:0.9.0'}
 
         self.driver = webdriver.Remote(
             desired_capabilities=desired_capabilities
