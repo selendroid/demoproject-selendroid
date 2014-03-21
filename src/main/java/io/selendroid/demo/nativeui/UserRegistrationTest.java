@@ -1,5 +1,5 @@
 /*
- * Copyright 2012-2013 eBay Software Foundation and selendroid committers.
+ * Copyright 2012-2014 eBay Software Foundation and selendroid committers.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  * in compliance with the License. You may obtain a copy of the License at
@@ -26,7 +26,7 @@ import org.openqa.selenium.WebElement;
 
 /**
  * Base Test to demonstrate how to test native android apps with Selendroid. App under test is:
- * src/main/resources/selendroid-test-app-0.8.0.apk
+ * src/main/resources/selendroid-test-app-0.9.0.apk
  * 
  * @author ddary
  */
@@ -35,7 +35,7 @@ public class UserRegistrationTest {
 
   @Before
   public void setup() throws Exception {
-    driver = new SelendroidDriver(new SelendroidCapabilities("io.selendroid.testapp:0.8.0"));
+    driver = new SelendroidDriver(new SelendroidCapabilities("io.selendroid.testapp:0.9.0"));
   }
 
   @Test
