@@ -57,7 +57,7 @@ public class MobileWebTest {
     SelendroidConfiguration config = new SelendroidConfiguration();
 
     selendroidServer = new SelendroidLauncher(config);
-    selendroidServer.lauchSelendroid();
+    selendroidServer.launchSelendroid();
 
     DesiredCapabilities caps = SelendroidCapabilities.android();
 
