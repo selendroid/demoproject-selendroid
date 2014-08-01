@@ -45,7 +45,7 @@ public class SelendroidIntegrationTest {
     SelendroidConfiguration config = new SelendroidConfiguration();
     config.addSupportedApp("src/main/resources/selendroid-test-app-0.10.0.apk");
     selendroidServer = new SelendroidLauncher(config);
-    selendroidServer.lauchSelendroid();
+    selendroidServer.launchSelendroid();
 
     SelendroidCapabilities caps =
         new SelendroidCapabilities("io.selendroid.testapp:0.10.0");
