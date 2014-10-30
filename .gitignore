@@ -11,3 +11,5 @@ bin/
 lint.xml
 gen/
 out/
+src/main/javascript/node_modules
+src/main/javascript/*.log

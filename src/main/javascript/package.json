@@ -1,0 +1,27 @@
+{
+  "name": "selendroid-nodejs-example",
+  "version": "1.0.0",
+  "description": " Using selendroid and node.js selenium-webdriver bindings",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/selendroid/demoproject-selendroid"
+  },
+  "keywords": [
+    "nodejs",
+    "selenium-webdriver",
+    "selendroid"
+  ],
+  "author": "Matt Edelman <medelman@paypal.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/selendroid/demoproject-selendroid/issues"
+  },
+  "homepage": "https://github.com/selendroid/demoproject-selendroid",
+  "dependencies": {
+    "selenium-webdriver": "^2.44.0"
+  }
+}
