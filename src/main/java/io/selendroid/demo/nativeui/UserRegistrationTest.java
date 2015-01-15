@@ -13,8 +13,8 @@
  */
 package io.selendroid.demo.nativeui;
 
-import io.selendroid.SelendroidCapabilities;
-import io.selendroid.SelendroidDriver;
+import io.selendroid.client.SelendroidDriver;
+import io.selendroid.common.SelendroidCapabilities;
 
 import org.junit.After;
 import org.junit.Assert;

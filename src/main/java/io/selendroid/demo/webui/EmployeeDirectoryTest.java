@@ -15,8 +15,8 @@ package io.selendroid.demo.webui;
 
 import static org.hamcrest.Matchers.endsWith;
 import static org.hamcrest.Matchers.startsWith;
-import io.selendroid.SelendroidCapabilities;
-import io.selendroid.SelendroidDriver;
+import io.selendroid.client.SelendroidDriver;
+import io.selendroid.common.SelendroidCapabilities;
 
 import java.util.concurrent.TimeUnit;
 

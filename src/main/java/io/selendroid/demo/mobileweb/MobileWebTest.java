@@ -13,10 +13,10 @@
  */
 package io.selendroid.demo.mobileweb;
 
-import io.selendroid.SelendroidCapabilities;
-import io.selendroid.SelendroidConfiguration;
-import io.selendroid.SelendroidDriver;
-import io.selendroid.SelendroidLauncher;
+import io.selendroid.client.SelendroidDriver;
+import io.selendroid.common.SelendroidCapabilities;
+import io.selendroid.standalone.SelendroidConfiguration;
+import io.selendroid.standalone.SelendroidLauncher;
 
 import org.junit.After;
 import org.junit.Before;
