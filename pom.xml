@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.selendroid</groupId>
 	<artifactId>demoproject-selendroid</artifactId>
-	<version>0.13.0</version>
+	<version>0.15.0</version>
 	<name>demoproject-selendroid</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<selendroid.version>0.13.0</selendroid.version>
+		<selendroid.version>0.15.0</selendroid.version>
 	</properties>
 
 	<developers>
@@ -31,7 +31,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.8.2</version>
+			<version>4.12</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hamcrest</groupId>
@@ -44,10 +44,10 @@
 			<plugins>
 				<plugin>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.1</version>
+					<version>3.3</version>
 					<configuration>
-						<source>1.6</source>
-						<target>1.6</target>
+						<source>1.8</source>
+						<target>1.8</target>
 					</configuration>
 				</plugin>
 				<!-- just to be on the safe side that the build jar is taken -->
